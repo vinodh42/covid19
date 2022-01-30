@@ -1,0 +1,25 @@
+{
+	"name": "TriggerForLookupActivity",
+	"properties": {
+		"description": "This trigger enables the use of lookup activity with for each iteration so that we can copy multiple files at a time",
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "testpipeline for lookup activity",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Minute",
+				"interval": 15,
+				"startTime": "2022-01-22T19:02:00Z",
+				"timeZone": "UTC"
+			}
+		}
+	}
+}

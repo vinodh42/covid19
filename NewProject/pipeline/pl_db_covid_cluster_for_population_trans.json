@@ -1,0 +1,33 @@
+{
+	"name": "pl_db_covid_cluster_for_population_trans",
+	"properties": {
+		"activities": [
+			{
+				"name": "notebook_db_population_trans",
+				"type": "DatabricksNotebook",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Covid_19_report_vinodh/setup_by_vinodh/Transformations/transform_population_data"
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureDatabricks1",
+					"type": "LinkedServiceReference"
+				}
+			}
+		],
+		"folder": {
+			"name": "Vinodh"
+		},
+		"annotations": [],
+		"lastPublishTime": "2022-01-24T11:26:51Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

@@ -1,0 +1,29 @@
+{
+	"name": "Copy ECDC Data",
+	"properties": {
+		"description": "It copies data from ecdc website using http connector and copydata",
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "pl_copy_cases_deaths_data",
+					"type": "PipelineReference"
+				},
+				"parameters": {
+					"relativeURL": "cloudboxacademy/covid19/raw/main/ecdc_data/hospital_admissions.csv",
+					"fileName": "hospital_admission.csv"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Minute",
+				"interval": 15,
+				"startTime": "2022-01-22T15:18:00Z",
+				"timeZone": "UTC"
+			}
+		}
+	}
+}
